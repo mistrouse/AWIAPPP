@@ -1,0 +1,39 @@
+@(groups: List[Groupe])
+
+@import models.Groupe
+
+
+
+@layouts.main("Messagerie IG") {
+<h1>Gérer les groupes</h1>
+
+<a href="@routes.GroupeController.createGroup()">Ajouter un groupe</a>
+
+<h2>Liste des groupes</h2>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+
+        @for(g <- groups) {
+        <tr>
+            <td>@g.getId()</td>
+            <td>@g.getName()</td>
+            <td><a href="@routes.GroupeController.voirGroupe(g.getId())">Voir</a></td>
+            <td><a href="#">Editer</a></td>
+            <td><a href="#">Supprimer</a></td>
+        </tr>
+        }
+        </tbody>
+    </table>
+</div>
+}

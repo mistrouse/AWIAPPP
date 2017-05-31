@@ -1,0 +1,14 @@
+@(groups: List[Groupe])
+
+@import models.Groupe
+
+
+
+@layouts.main("Messagerie IG") {
+<h2>Mes groupes</h2>
+<ul>
+    @for(g <- groups) {
+    <li><a href="@routes.GroupeController.voirGroupe(g.getId())">@g.getName()</li>
+    }
+</ul>
+}

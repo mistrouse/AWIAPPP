@@ -1,0 +1,21 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET     /                           controllers.HomeController.index
+POST    /                           controllers.HomeController.doMessageCreate()
+GET     /login                      controllers.HomeController.login
+POST    /login                      controllers.HomeController.handleLogin
+GET     /initialize                 controllers.HomeController.initialize
+GET     /listeDesGroupes            controllers.GroupeController.index
+GET     /voirGroupe/:id             controllers.GroupeController.voirGroupe(id: Long)
+GET     /mesGroupes                 controllers.GroupeController.myGroups()
+GET     /creerGroupe                controllers.GroupeController.createGroup()
+GET     /listeUtilisateurs          controllers.UserController.list()
+GET     /creerUtilisateur           controllers.UserController.create()
+POST    /listeUtilisateurs          controllers.UserController.doCreate()
+GET     /listeMessages              controllers.MessageController.index()
+GET     /fichier/:id                controllers.DocumentController.getFile(id: Long)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
