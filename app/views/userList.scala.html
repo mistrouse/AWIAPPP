@@ -27,7 +27,7 @@
                 <td>@u.getName()</td>
                 <td>@u.getEmail()</td>
                 <td><a href="#">Editer</a></td>
-                <td><a href="#">Supprimer</a></td>
+                <td><a href="@routes.UserController.delete(u.getId())">Supprimer</a></td>
             </tr>
         }
         </tbody>

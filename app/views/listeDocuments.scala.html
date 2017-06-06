@@ -1,0 +1,31 @@
+@(documents: List[Document])
+
+@import models.Document
+
+
+
+@layouts.main("Messagerie IG") {
+<h1>Documents</h1>
+
+<p>Les documents auxquels vous avez accés.</p>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        @for(d <- documents) {
+        <tr>
+            <td>@d.getId()</td>
+            <td><a href="@routes.DocumentController.getFile(d.getId())">@d.getTitle()</a></td>
+        </tr>
+        }
+        </tbody>
+    </table>
+</div>
+}

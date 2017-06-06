@@ -6,8 +6,9 @@
 
 
 @layouts.main("Messagerie IG") {
-<h1>Home</h1>
+<h1>Bienvenue sur l'outil de messagerie de Polytech Montpellier</h1>
 
+<p>Ici, vous pouvez communiquer avec les professeurs et étudiants de Polytech à travers les groupes auxquels vous appartenez.</p>
 
 <h2>Nouveau message</h2>
 
@@ -65,7 +66,7 @@
         <td>@m.getCreationDate()</td>
         <td>
           @if(m.getDocument() != null) {
-            <a href="@route.DocumentController.getFile(m.getDocument().getId())">@m.getDocument().getTitle()</a>
+            <a href="@routes.DocumentController.getFile(m.getDocument().getId())">@m.getDocument().getTitle()</a>
           }
         </td>
       </tr>

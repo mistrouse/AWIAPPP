@@ -22,7 +22,9 @@ public class ActionAuthenticator extends Security.Authenticator {
     @Override
     public String getUsername(Http.Context ctx) {
         String token = getTokenFromCookies(ctx);
-        userService.authenticate(token);
+        if(token != null) {
+            userService.authenticate(token);
+        }
         User currentUser = userService.getCurrentUser();
         if(currentUser != null) {
             return currentUser.getEmail();

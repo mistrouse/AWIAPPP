@@ -42,7 +42,7 @@
                 <a href="assets/upload/@m.getDocument().getTitle()">@m.getDocument().getTitle()</a>
                 }
             </td>
-            <td><a href="#">Supprimer</a></td>
+            <td><a href="@routes.MessageController.delete(m.getId())">Supprimer</a></td>
         </tr>
         }
         </tbody>

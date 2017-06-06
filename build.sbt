@@ -8,6 +8,8 @@ lazy val root = (project in file(".")).enablePlugins(PlayJava, PlayEbean)
 scalaVersion := "2.11.11"
 
 libraryDependencies += filters
+libraryDependencies += javaJdbc
+libraryDependencies += "org.postgresql" % "postgresql" % "9.3-1102-jdbc4"
 
 val appDependencies = Seq(
   "com.feth" % "play-authenticate_2.11" % "0.8.3"

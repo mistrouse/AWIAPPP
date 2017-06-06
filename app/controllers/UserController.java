@@ -1,6 +1,8 @@
 package controllers;
 
+import com.avaje.ebean.Ebean;
 import models.Groupe;
+import models.Message;
 import models.User;
 import play.Logger;
 import play.data.DynamicForm;
@@ -59,5 +61,11 @@ public class UserController extends Controller {
         user.save();
 
         return this.list();
+    }
+
+    @Security.Authenticated(ActionAuthenticator.class)
+    public Result delete(Long id) {
+        Ebean.delete(User.find.byId(id));
+        return list();
     }
 }

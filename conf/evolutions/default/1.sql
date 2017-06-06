@@ -7,6 +7,7 @@ create table document (
   id                            bigint not null,
   title                         varchar(255),
   creation_date                 timestamp,
+  path                          varchar(255),
   constraint pk_document primary key (id)
 );
 create sequence document_seq;

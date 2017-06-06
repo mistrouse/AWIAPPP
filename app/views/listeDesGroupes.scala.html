@@ -29,8 +29,8 @@
             <td>@g.getId()</td>
             <td>@g.getName()</td>
             <td><a href="@routes.GroupeController.voirGroupe(g.getId())">Voir</a></td>
-            <td><a href="#">Editer</a></td>
-            <td><a href="#">Supprimer</a></td>
+            <td><a href="">Editer</a></td>
+            <td><a href="@routes.GroupeController.delete(g.getId())">Supprimer</a></td>
         </tr>
         }
         </tbody>

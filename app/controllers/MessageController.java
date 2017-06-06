@@ -1,5 +1,7 @@
 package controllers;
 
+import com.avaje.ebean.Ebean;
+import models.Document;
 import models.Groupe;
 import models.Message;
 import models.User;
@@ -27,5 +29,11 @@ public class MessageController extends Controller {
     public Result index() {
         List<Message> allMessages = Message.find.all();
         return ok(views.html.listeMessages.render(allMessages));
+    }
+
+    @Security.Authenticated(ActionAuthenticator.class)
+    public Result delete(Long id) {
+        Ebean.delete(Message.find.byId(id));
+        return index();
     }
 }

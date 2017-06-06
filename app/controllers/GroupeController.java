@@ -1,5 +1,7 @@
 package controllers;
 
+import com.avaje.ebean.Ebean;
+import models.Document;
 import models.Groupe;
 import models.User;
 import play.Logger;
@@ -49,5 +51,11 @@ public class GroupeController extends Controller {
     @Security.Authenticated(ActionAuthenticator.class)
     public Result createGroup() {
         return ok(views.html.creerGroupe.render());
+    }
+
+    @Security.Authenticated(ActionAuthenticator.class)
+    public Result delete(Long id) {
+       Ebean.delete(Groupe.find.byId(id));
+       return index();
     }
 }
