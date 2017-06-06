@@ -86,7 +86,7 @@ Seq[Any](format.raw/*1.24*/("""
 object createUser extends createUser_Scope0.createUser
               /*
                   -- GENERATED --
-                  DATE: Wed Jun 07 01:06:47 CEST 2017
+                  DATE: Wed Jun 07 01:29:41 CEST 2017
                   SOURCE: /Users/florianeMac/Documents/GitHub/AWIAPPP/app/views/createUser.scala.html
                   HASH: 3e8becc5f28428697e1111cbdb3e005e4ec9edde
                   MATRIX: 761->1|898->23|926->47|955->51|969->58|999->80|1038->82|1066->84|1138->129|1153->135|1200->161|1919->853|1951->869|1991->871|2032->884|2265->1089|2276->1090|2306->1098|2338->1102|2349->1103|2381->1113|2426->1130|2494->1167|2526->1172

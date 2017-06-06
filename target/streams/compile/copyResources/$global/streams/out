@@ -1,0 +1,9 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/Users/florianeMac/Documents/GitHub/AWIAPPP/conf/application.conf,/Users/florianeMac/Documents/GitHub/AWIAPPP/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/Users/florianeMac/Documents/GitHub/AWIAPPP/conf/evolutions,/Users/florianeMac/Documents/GitHub/AWIAPPP/target/scala-2.11/classes/evolutions)[0m
+[0m[[0mdebug[0m] [0m	(/Users/florianeMac/Documents/GitHub/AWIAPPP/conf/logback.xml,/Users/florianeMac/Documents/GitHub/AWIAPPP/target/scala-2.11/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/Users/florianeMac/Documents/GitHub/AWIAPPP/conf/play-authenticate,/Users/florianeMac/Documents/GitHub/AWIAPPP/target/scala-2.11/classes/play-authenticate)[0m
+[0m[[0mdebug[0m] [0m	(/Users/florianeMac/Documents/GitHub/AWIAPPP/conf/routes,/Users/florianeMac/Documents/GitHub/AWIAPPP/target/scala-2.11/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/Users/florianeMac/Documents/GitHub/AWIAPPP/conf/evolutions/default,/Users/florianeMac/Documents/GitHub/AWIAPPP/target/scala-2.11/classes/evolutions/default)[0m
+[0m[[0mdebug[0m] [0m	(/Users/florianeMac/Documents/GitHub/AWIAPPP/conf/evolutions/default/1.sql,/Users/florianeMac/Documents/GitHub/AWIAPPP/target/scala-2.11/classes/evolutions/default/1.sql)[0m
+[0m[[0mdebug[0m] [0m	(/Users/florianeMac/Documents/GitHub/AWIAPPP/conf/play-authenticate/mine.conf,/Users/florianeMac/Documents/GitHub/AWIAPPP/target/scala-2.11/classes/play-authenticate/mine.conf)[0m

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/florianeMac/Documents/GitHub/AWIAPPP/conf/routes
-// @DATE:Wed Jun 07 01:06:44 CEST 2017
+// @DATE:Wed Jun 07 01:29:40 CEST 2017
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -15,7 +15,7 @@ import _root_.play.libs.F
 package controllers.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:21
+  // @LINE:25
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -23,7 +23,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:21
+    // @LINE:25
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
@@ -42,6 +42,16 @@ package controllers.javascript {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
+  
+    // @LINE:19
+    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.DocumentController.index",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "listeFichiers"})
+        }
+      """
+    )
   
     // @LINE:18
     def getFile: JavaScriptReverseRoute = JavaScriptReverseRoute(
@@ -89,6 +99,16 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "creerUtilisateur"})
+        }
+      """
+    )
+  
+    // @LINE:21
+    def delete: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.UserController.delete",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "supprimerUtilisateur/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id0)})
         }
       """
     )
@@ -163,6 +183,16 @@ package controllers.javascript {
     }
 
   
+    // @LINE:20
+    def delete: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.MessageController.delete",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "supprimerMessage/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id0)})
+        }
+      """
+    )
+  
     // @LINE:17
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.MessageController.index",
@@ -183,22 +213,22 @@ package controllers.javascript {
     }
 
   
+    // @LINE:22
+    def delete: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.GroupeController.delete",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "supprimerGroupe/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id0)})
+        }
+      """
+    )
+  
     // @LINE:11
     def voirGroupe: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.GroupeController.voirGroupe",
       """
         function(id0) {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "voirGroupe/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id0)})
-        }
-      """
-    )
-  
-    // @LINE:10
-    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.GroupeController.index",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "listeDesGroupes"})
         }
       """
     )
@@ -219,6 +249,16 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "mesGroupes"})
+        }
+      """
+    )
+  
+    // @LINE:10
+    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.GroupeController.index",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "listeDesGroupes"})
         }
       """
     )

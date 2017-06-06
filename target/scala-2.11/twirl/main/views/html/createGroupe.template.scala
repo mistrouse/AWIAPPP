@@ -58,7 +58,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 object createGroupe extends createGroupe_Scope0.createGroupe
               /*
                   -- GENERATED --
-                  DATE: Wed Jun 07 01:06:46 CEST 2017
+                  DATE: Wed Jun 07 01:29:41 CEST 2017
                   SOURCE: /Users/florianeMac/Documents/GitHub/AWIAPPP/app/views/createGroupe.scala.html
                   HASH: e5f643d2bf2701a794e9fdac3bd7a6b6f198be35
                   MATRIX: 841->0

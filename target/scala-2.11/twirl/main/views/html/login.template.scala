@@ -66,7 +66,7 @@ Seq[Any](format.raw/*1.4*/("""
 object login extends login_Scope0.login
               /*
                   -- GENERATED --
-                  DATE: Wed Jun 07 01:06:47 CEST 2017
+                  DATE: Wed Jun 07 01:29:41 CEST 2017
                   SOURCE: /Users/florianeMac/Documents/GitHub/AWIAPPP/app/views/login.scala.html
                   HASH: 94384f0d5d68b3a2e970dff0c2e6e3c43e8e2067
                   MATRIX: 738->1|834->3|862->6|876->13|898->27|937->29|968->34|1029->69|1043->75|1092->104|1682->664

@@ -4,7 +4,7 @@
 		module="ent_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20170607005331"
+		publication="20170607012906"
 	>
 		<description>
 		ent
@@ -52,5 +52,7 @@
 		<dependency org="com.typesafe.play" name="play-netty-server_2.11" rev="2.5.14" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-logback_2.11" rev="2.5.14" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="filters-helpers_2.11" rev="2.5.14" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-java-jdbc_2.11" rev="2.5.14" conf="compile->default(compile)"/>
+		<dependency org="org.postgresql" name="postgresql" rev="9.3-1102-jdbc4" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

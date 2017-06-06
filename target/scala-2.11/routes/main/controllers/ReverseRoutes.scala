@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/florianeMac/Documents/GitHub/AWIAPPP/conf/routes
-// @DATE:Wed Jun 07 01:06:44 CEST 2017
+// @DATE:Wed Jun 07 01:29:40 CEST 2017
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -13,14 +13,14 @@ import _root_.play.libs.F
 // @LINE:5
 package controllers {
 
-  // @LINE:21
+  // @LINE:25
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:21
+    // @LINE:25
     def versioned(file:Asset): Call = {
       implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[Asset]].unbind("file", file))
@@ -34,6 +34,12 @@ package controllers {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
+  
+    // @LINE:19
+    def index(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "listeFichiers")
+    }
   
     // @LINE:18
     def getFile(id:Long): Call = {
@@ -66,6 +72,12 @@ package controllers {
     def create(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "creerUtilisateur")
+    }
+  
+    // @LINE:21
+    def delete(id:Long): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "supprimerUtilisateur/" + implicitly[PathBindable[Long]].unbind("id", id))
     }
   
   }
@@ -116,6 +128,12 @@ package controllers {
     }
 
   
+    // @LINE:20
+    def delete(id:Long): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "supprimerMessage/" + implicitly[PathBindable[Long]].unbind("id", id))
+    }
+  
     // @LINE:17
     def index(): Call = {
       import ReverseRouteContext.empty
@@ -131,16 +149,16 @@ package controllers {
     }
 
   
+    // @LINE:22
+    def delete(id:Long): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "supprimerGroupe/" + implicitly[PathBindable[Long]].unbind("id", id))
+    }
+  
     // @LINE:11
     def voirGroupe(id:Long): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "voirGroupe/" + implicitly[PathBindable[Long]].unbind("id", id))
-    }
-  
-    // @LINE:10
-    def index(): Call = {
-      import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "listeDesGroupes")
     }
   
     // @LINE:13
@@ -153,6 +171,12 @@ package controllers {
     def myGroups(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "mesGroupes")
+    }
+  
+    // @LINE:10
+    def index(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "listeDesGroupes")
     }
   
   }

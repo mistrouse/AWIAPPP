@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/florianeMac/Documents/GitHub/AWIAPPP/conf/routes
-// @DATE:Wed Jun 07 01:06:44 CEST 2017
+// @DATE:Wed Jun 07 01:29:40 CEST 2017
 
 package router
 
@@ -26,7 +26,7 @@ class Routes(
   MessageController_0: controllers.MessageController,
   // @LINE:18
   DocumentController_5: controllers.DocumentController,
-  // @LINE:21
+  // @LINE:25
   Assets_4: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -43,7 +43,7 @@ class Routes(
     MessageController_0: controllers.MessageController,
     // @LINE:18
     DocumentController_5: controllers.DocumentController,
-    // @LINE:21
+    // @LINE:25
     Assets_4: controllers.Assets
   ) = this(errorHandler, HomeController_2, GroupeController_1, UserController_3, MessageController_0, DocumentController_5, Assets_4, "/")
 
@@ -73,6 +73,10 @@ class Routes(
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """listeUtilisateurs""", """controllers.UserController.doCreate()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """listeMessages""", """controllers.MessageController.index()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """fichier/""" + "$" + """id<[^/]+>""", """controllers.DocumentController.getFile(id:Long)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """listeFichiers""", """controllers.DocumentController.index()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """supprimerMessage/""" + "$" + """id<[^/]+>""", """controllers.MessageController.delete(id:Long)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """supprimerUtilisateur/""" + "$" + """id<[^/]+>""", """controllers.UserController.delete(id:Long)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """supprimerGroupe/""" + "$" + """id<[^/]+>""", """controllers.GroupeController.delete(id:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
@@ -319,11 +323,79 @@ class Routes(
     )
   )
 
+  // @LINE:19
+  private[this] lazy val controllers_DocumentController_index14_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("listeFichiers")))
+  )
+  private[this] lazy val controllers_DocumentController_index14_invoker = createInvoker(
+    DocumentController_5.index(),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.DocumentController",
+      "index",
+      Nil,
+      "GET",
+      """""",
+      this.prefix + """listeFichiers"""
+    )
+  )
+
+  // @LINE:20
+  private[this] lazy val controllers_MessageController_delete15_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("supprimerMessage/"), DynamicPart("id", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_MessageController_delete15_invoker = createInvoker(
+    MessageController_0.delete(fakeValue[Long]),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.MessageController",
+      "delete",
+      Seq(classOf[Long]),
+      "GET",
+      """""",
+      this.prefix + """supprimerMessage/""" + "$" + """id<[^/]+>"""
+    )
+  )
+
   // @LINE:21
-  private[this] lazy val controllers_Assets_versioned14_route = Route("GET",
+  private[this] lazy val controllers_UserController_delete16_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("supprimerUtilisateur/"), DynamicPart("id", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_UserController_delete16_invoker = createInvoker(
+    UserController_3.delete(fakeValue[Long]),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.UserController",
+      "delete",
+      Seq(classOf[Long]),
+      "GET",
+      """""",
+      this.prefix + """supprimerUtilisateur/""" + "$" + """id<[^/]+>"""
+    )
+  )
+
+  // @LINE:22
+  private[this] lazy val controllers_GroupeController_delete17_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("supprimerGroupe/"), DynamicPart("id", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_GroupeController_delete17_invoker = createInvoker(
+    GroupeController_1.delete(fakeValue[Long]),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.GroupeController",
+      "delete",
+      Seq(classOf[Long]),
+      "GET",
+      """""",
+      this.prefix + """supprimerGroupe/""" + "$" + """id<[^/]+>"""
+    )
+  )
+
+  // @LINE:25
+  private[this] lazy val controllers_Assets_versioned18_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_versioned14_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_versioned18_invoker = createInvoker(
     Assets_4.versioned(fakeValue[String], fakeValue[Asset]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -423,10 +495,34 @@ class Routes(
         controllers_DocumentController_getFile13_invoker.call(DocumentController_5.getFile(id))
       }
   
+    // @LINE:19
+    case controllers_DocumentController_index14_route(params) =>
+      call { 
+        controllers_DocumentController_index14_invoker.call(DocumentController_5.index())
+      }
+  
+    // @LINE:20
+    case controllers_MessageController_delete15_route(params) =>
+      call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_MessageController_delete15_invoker.call(MessageController_0.delete(id))
+      }
+  
     // @LINE:21
-    case controllers_Assets_versioned14_route(params) =>
+    case controllers_UserController_delete16_route(params) =>
+      call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_UserController_delete16_invoker.call(UserController_3.delete(id))
+      }
+  
+    // @LINE:22
+    case controllers_GroupeController_delete17_route(params) =>
+      call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_GroupeController_delete17_invoker.call(GroupeController_1.delete(id))
+      }
+  
+    // @LINE:25
+    case controllers_Assets_versioned18_route(params) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
-        controllers_Assets_versioned14_invoker.call(Assets_4.versioned(path, file))
+        controllers_Assets_versioned18_invoker.call(Assets_4.versioned(path, file))
       }
   }
 }

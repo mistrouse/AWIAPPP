@@ -61,7 +61,7 @@ Seq[Any](format.raw/*1.24*/("""
 object myGroups extends myGroups_Scope0.myGroups
               /*
                   -- GENERATED --
-                  DATE: Wed Jun 07 01:06:47 CEST 2017
+                  DATE: Wed Jun 07 01:29:41 CEST 2017
                   SOURCE: /Users/florianeMac/Documents/GitHub/AWIAPPP/app/views/myGroups.scala.html
                   HASH: 4842d5e356329496dfe662a4b3ce6cbb5b928c16
                   MATRIX: 757->1|894->23|922->47|951->51|965->58|995->80|1034->82|1061->83|1118->114|1150->130|1190->132|1222->137|1263->151|1278->157|1338->196|1368->199|1378->200|1409->210|1450->221|1478->222
