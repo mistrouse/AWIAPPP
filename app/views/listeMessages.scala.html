@@ -17,7 +17,7 @@
             <th>Contenu</th>
             <th>Autheur</th>
             <th>Groupe</th>
-            <th>Envoyé à</th>
+            <th>Envoyé le</th>
             <th>Document</th>
             <th></th>
         </tr>
@@ -29,14 +29,14 @@
             <td>@m.getId()</td>
             <td>@m.getContent()</td>
             <td>@m.getAutheur().getName()</td>
-            <td>
+            <td><a href="@routes.GroupeController.voirGroupe(m.getId())">
                 @if(m.getGroupe() != null) {
                 @m.getGroupe().getName()
                 } else {
                 all
                 }
             </td>
-            <td>@m.getCreationDate()</td>
+            <td>@m.getCreationDate.format("dd MMM yy")</td>
             <td>
                 @if(m.getDocument() != null) {
                 <a href="assets/upload/@m.getDocument().getTitle()">@m.getDocument().getTitle()</a>

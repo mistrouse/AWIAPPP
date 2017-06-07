@@ -51,7 +51,7 @@ Seq[Any](format.raw/*1.24*/("""
         </div>
     </div>
     <fieldset class="form-group">
-        <legend class="col-form-legend col-sm-2">Groupes</legend>
+        <legend class="col-form-legend col-sm-2">Groupes : </legend>
         """),_display_(/*25.10*/for(g <- groups) yield /*25.26*/ {_display_(Seq[Any](format.raw/*25.28*/("""
             """),format.raw/*26.13*/("""<div class="form-check form-check-inline">
                 <label class="form-check-label">
@@ -86,10 +86,10 @@ Seq[Any](format.raw/*1.24*/("""
 object createUser extends createUser_Scope0.createUser
               /*
                   -- GENERATED --
-                  DATE: Wed Jun 07 01:29:41 CEST 2017
+                  DATE: Wed Jun 07 19:54:31 CEST 2017
                   SOURCE: /Users/florianeMac/Documents/GitHub/AWIAPPP/app/views/createUser.scala.html
-                  HASH: 3e8becc5f28428697e1111cbdb3e005e4ec9edde
-                  MATRIX: 761->1|898->23|926->47|955->51|969->58|999->80|1038->82|1066->84|1138->129|1153->135|1200->161|1919->853|1951->869|1991->871|2032->884|2265->1089|2276->1090|2306->1098|2338->1102|2349->1103|2381->1113|2426->1130|2494->1167|2526->1172
+                  HASH: e3f066f671172f1d4f81e6fc8ad7089ddbfbc1af
+                  MATRIX: 761->1|898->23|926->47|955->51|969->58|999->80|1038->82|1066->84|1138->129|1153->135|1200->161|1922->856|1954->872|1994->874|2035->887|2268->1092|2279->1093|2309->1101|2341->1105|2352->1106|2384->1116|2429->1133|2497->1170|2529->1175
                   LINES: 27->1|32->1|34->4|37->7|37->7|37->7|37->7|39->9|40->10|40->10|40->10|55->25|55->25|55->25|56->26|58->28|58->28|58->28|58->28|58->28|58->28|59->29|61->31|62->32
                   -- GENERATED --
               */
