@@ -69,6 +69,11 @@ public class HomeController extends Controller {
         return ok(views.html.login.render());
     }
 
+    public Result logout() {
+        session().remove("userToken");
+        return this.login();
+    }
+
     public Result initialize() {
         User u = new User(null, "bachir", "bachir@gmail.com","abc123", 2);
         Groupe g1 = new Groupe(null, "IG3");
