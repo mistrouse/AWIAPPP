@@ -1,0 +1,9 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/Users/mehdi/bachir/AWIAPPP/conf/application.conf,/Users/mehdi/bachir/AWIAPPP/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/Users/mehdi/bachir/AWIAPPP/conf/evolutions,/Users/mehdi/bachir/AWIAPPP/target/scala-2.11/classes/evolutions)[0m
+[0m[[0mdebug[0m] [0m	(/Users/mehdi/bachir/AWIAPPP/conf/logback.xml,/Users/mehdi/bachir/AWIAPPP/target/scala-2.11/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/Users/mehdi/bachir/AWIAPPP/conf/play-authenticate,/Users/mehdi/bachir/AWIAPPP/target/scala-2.11/classes/play-authenticate)[0m
+[0m[[0mdebug[0m] [0m	(/Users/mehdi/bachir/AWIAPPP/conf/routes,/Users/mehdi/bachir/AWIAPPP/target/scala-2.11/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/Users/mehdi/bachir/AWIAPPP/conf/evolutions/default,/Users/mehdi/bachir/AWIAPPP/target/scala-2.11/classes/evolutions/default)[0m
+[0m[[0mdebug[0m] [0m	(/Users/mehdi/bachir/AWIAPPP/conf/evolutions/default/1.sql,/Users/mehdi/bachir/AWIAPPP/target/scala-2.11/classes/evolutions/default/1.sql)[0m
+[0m[[0mdebug[0m] [0m	(/Users/mehdi/bachir/AWIAPPP/conf/play-authenticate/mine.conf,/Users/mehdi/bachir/AWIAPPP/target/scala-2.11/classes/play-authenticate/mine.conf)[0m
