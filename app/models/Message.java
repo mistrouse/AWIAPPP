@@ -29,12 +29,15 @@ public class Message extends Model {
 
 
     @ManyToOne(optional=false)
+    @JsonBackReference
     User autheur;
 
     @ManyToOne(optional=true)
+    @JsonBackReference
     Groupe groupe;
 
     @ManyToOne(optional=true)
+    @JsonBackReference
     Document document;
 
     public Message(Long id, String content, Date creationDate,  User autheur, Groupe groupe, Document document) {

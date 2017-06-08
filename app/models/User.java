@@ -41,9 +41,11 @@ public class User extends Model {
     int role;
 
     @OneToMany(mappedBy="autheur")
+    @JsonBackReference
     List<Message> messagesPostes;
 
     @ManyToMany(mappedBy = "users")
+    @JsonManagedReference
     List<Groupe> groupes;
 
     public User(Long id, String name, String email,  String password, int role) {

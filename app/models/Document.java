@@ -27,6 +27,7 @@ public class Document extends Model {
 
 
     @OneToMany(mappedBy = "document")
+    @JsonManagedReference
     Message message;
 
     String path;

@@ -1,6 +1,8 @@
 package models;
 
 import com.avaje.ebean.Model;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import play.api.libs.Codecs;
 
 import javax.persistence.*;
@@ -19,9 +21,11 @@ public class Groupe extends Model {
     String name;
 
     @OneToMany(mappedBy = "groupe")
+    @JsonManagedReference
     List<Message> messages;
 
     @ManyToMany()
+    @JsonBackReference
     List<User> users;
 
     public Groupe(Long id, String name) {
